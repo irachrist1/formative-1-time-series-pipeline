@@ -1,0 +1,36 @@
+[
+  {
+    "date_time": {"$date": "2018-09-30T21:00:00Z"},
+    "location_id": 1,
+    "holiday": "No Holiday",
+    "temp": 283.45,
+    "rain_1h": 0.0,
+    "snow_1h": 0.0,
+    "clouds_all": 75,
+    "traffic_volume": 2159,
+    "weather": {"weather_main": "Clouds", "weather_description": "broken clouds"}
+  },
+  {
+    "date_time": {"$date": "2018-09-30T22:00:00Z"},
+    "location_id": 1,
+    "holiday": "No Holiday",
+    "temp": 282.76,
+    "rain_1h": 0.0,
+    "snow_1h": 0.0,
+    "clouds_all": 90,
+    "traffic_volume": 1450,
+    "weather": {"weather_main": "Clouds", "weather_description": "overcast clouds"}
+  },
+  {
+    "date_time": {"$date": "2018-09-30T23:00:00Z"},
+    "location_id": 1,
+    "holiday": "No Holiday",
+    "temp": 282.12,
+    "rain_1h": 0.0,
+    "snow_1h": 0.0,
+    "clouds_all": 90,
+    "traffic_volume": 954,
+    "weather": {"weather_main": "Clouds", "weather_description": "overcast clouds"}
+  }
+]
+

@@ -1,0 +1,19 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+tmp/
+
+# Generated project files
+data/processed/
+outputs/figures/
+outputs/tables/
+models/*.joblib
+models/*.pkl
+
+# Local database storage
+*.db
+*.sqlite3

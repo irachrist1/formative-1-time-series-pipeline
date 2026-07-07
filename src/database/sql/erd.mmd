@@ -1,0 +1,38 @@
+erDiagram
+    LOCATIONS ||--o{ TRAFFIC_RECORDS : records
+    WEATHER_CONDITIONS ||--o{ TRAFFIC_RECORDS : describes
+    TRAFFIC_RECORDS ||--o{ MODEL_PREDICTIONS : receives
+
+    LOCATIONS {
+        int id PK
+        varchar station_code UK
+        varchar road_name
+        varchar direction
+        varchar city
+        varchar state
+    }
+    WEATHER_CONDITIONS {
+        int id PK
+        varchar weather_main
+        varchar weather_description
+    }
+    TRAFFIC_RECORDS {
+        bigint id PK
+        int location_id FK
+        int weather_condition_id FK
+        datetime date_time
+        varchar holiday
+        double temp
+        double rain_1h
+        double snow_1h
+        tinyint clouds_all
+        int traffic_volume
+    }
+    MODEL_PREDICTIONS {
+        bigint id PK
+        bigint traffic_record_id FK
+        double predicted_volume
+        varchar model_version
+        datetime created_at
+    }
+

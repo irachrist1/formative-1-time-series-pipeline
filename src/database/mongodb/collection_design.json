@@ -1,0 +1,34 @@
+{
+  "collection": "traffic_records",
+  "design_reason": "One self-contained document represents one hourly observation. Weather is embedded because it is read together with traffic, while location_id remains available for filtering.",
+  "indexes": [
+    {"keys": {"date_time": 1}, "options": {"unique": true}},
+    {"keys": {"location_id": 1, "date_time": -1}, "options": {}},
+    {"keys": {"weather.weather_main": 1}, "options": {}}
+  ],
+  "validation": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["date_time", "location_id", "traffic_volume", "temp", "weather"],
+      "properties": {
+        "date_time": {"bsonType": "date"},
+        "location_id": {"bsonType": "int"},
+        "holiday": {"bsonType": "string"},
+        "temp": {"bsonType": ["double", "int"]},
+        "rain_1h": {"bsonType": ["double", "int"], "minimum": 0},
+        "snow_1h": {"bsonType": ["double", "int"], "minimum": 0},
+        "clouds_all": {"bsonType": "int", "minimum": 0, "maximum": 100},
+        "traffic_volume": {"bsonType": "int", "minimum": 0},
+        "weather": {
+          "bsonType": "object",
+          "required": ["weather_main", "weather_description"],
+          "properties": {
+            "weather_main": {"bsonType": "string"},
+            "weather_description": {"bsonType": "string"}
+          }
+        }
+      }
+    }
+  }
+}
+
