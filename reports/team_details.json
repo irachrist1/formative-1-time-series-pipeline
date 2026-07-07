@@ -2,7 +2,7 @@
   "course": "Machine Learning Techniques",
   "assignment": "Formative 1: Building a Pipeline for Time Series Data",
   "group_name": "[Add group name]",
-  "github_url": "[Add GitHub repository URL]",
+  "github_url": "https://github.com/irachrist1/formative-1-time-series-pipeline",
   "members": [
     {"name": "[Member 1 name]", "student_id": "[ID]", "contribution": "Data preprocessing, exploratory analysis and visualizations"},
     {"name": "[Member 2 name]", "student_id": "[ID]", "contribution": "Feature engineering, model experiments and evaluation"},
@@ -10,4 +10,3 @@
     {"name": "[Member 4 name]", "student_id": "[ID]", "contribution": "FastAPI CRUD endpoints, integration testing and prediction script"}
   ]
 }
-
